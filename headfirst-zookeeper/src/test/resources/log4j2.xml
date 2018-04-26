@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Configuration 是根结点-->
+<!--status是log4j本身的日志状态，默认是WARN，改成TRACE可以看到log4j的运行输出日志-->
+<Configuration status="WARN">
+    <!--Appdenders添加器节点，“添加”可以理解为“向……添加日志”-->
+    <Appenders>
+        <!--基础的Console控制台适配器-->
+        <!--name-->
+        <!--target 通常Console都是SYSTEM_OUT-->
+        <Console name="Console" target="SYSTEM_OUT">
+            <!--表达式布局-->
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %5level %logger{36} - %msg%n" />
+        </Console>
+    </Appenders>
+    <!--日志节点-->
+    <Loggers>
+        <!--根日志-->
+        <!--level 本日志对象的日志等级-->
+        <Root level="Info">
+            <!--日志添加器引用-->
+            <!--ref指定appender的name-->
+            <AppenderRef ref="Console" />
+        </Root>
+    </Loggers>
+</Configuration>

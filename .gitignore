@@ -1,0 +1,7 @@
+.*
+!.editorconfig
+!.gitignore
+.idea
+target/
+*.iml
+*git.properties
