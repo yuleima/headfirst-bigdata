@@ -6,12 +6,14 @@ import org.junit.Test;
 
 public class TestConnect {
     ZKConnection zkConnection;
+
     @Before
-    public void before(){
+    public void before() {
         zkConnection = new ZKConnection();
     }
+
     @Test
-    public void testConnect(){
+    public void testConnect() {
         zkConnection.connect();
     }
 }

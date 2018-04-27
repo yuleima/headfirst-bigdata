@@ -10,6 +10,7 @@ import java.util.concurrent.CountDownLatch;
 public class ConnWatcher implements Watcher {
     private static Logger logger = LoggerFactory.getLogger(ConnWatcher.class);
     private CountDownLatch connectedSignal = new CountDownLatch(1);
+
     @Override
     public void process(WatchedEvent watchedEvent) {
         logger.info("process");
