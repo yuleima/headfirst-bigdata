@@ -30,8 +30,9 @@ public class SyncSender {
             } catch (ExecutionException e) {
                 e.printStackTrace();
             }
-
         });
+        producer.flush();
+        producer.close();
     }
 
     private static Properties initProps() {

@@ -21,6 +21,8 @@ public class FireAndForgetSender {
             producer.send(record);
             logger.info("message {} send done.", i);
         });
+        producer.flush();
+        producer.close();
     }
 
     private static Properties initProps() {

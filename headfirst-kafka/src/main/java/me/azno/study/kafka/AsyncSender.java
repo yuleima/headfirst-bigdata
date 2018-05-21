@@ -25,8 +25,9 @@ public class AsyncSender {
                     logger.info("message {} send done. partition {}, offset {}", i, metadata.partition(), metadata.offset());
                 }
             });
-
         });
+        producer.flush();
+        producer.close();
     }
 
     private static Properties initProps() {
